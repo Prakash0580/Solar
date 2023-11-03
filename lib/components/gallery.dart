@@ -81,3 +81,51 @@ class GalleryCont extends StatelessWidget {
     );
   }
 }
+
+class MobGallery extends StatelessWidget {
+  const MobGallery({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: null,
+      width: width(context),
+      color: Color(0xFFfaf7f7),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 15, right: 15),
+        child: Column(
+          children: [
+            heightSizedBox(50.0),
+            Text(
+              "Our Gallery",
+              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+            ),
+            heightSizedBox(50.0),
+            GalleryCont(
+              src: "assets/images/gallery1.jpg",
+              height: 150,
+            ),
+            heightSizedBox(30.0),
+            GalleryCont(
+              src: "assets/images/gallery2.jpg",
+              height: 150,
+            ),
+            heightSizedBox(30.0),
+            GalleryCont(
+              src: "assets/images/gallery3.jpg",
+              height: 150,
+            ),
+            heightSizedBox(30.0),
+            GalleryCont(
+              src: "assets/images/gallery4.jpg",
+              height: 150,
+            ),
+            heightSizedBox(30.0),
+          ],
+        ),
+      ),
+    );
+  }
+}

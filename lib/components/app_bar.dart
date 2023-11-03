@@ -16,8 +16,9 @@ class CusAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.white,
       automaticallyImplyLeading: false,
       title: Row(
+        // mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          if (!Responsive.isDesktop(context))
+          if (Responsive.isMobile(context) || Responsive.isTablet(context))
             Builder(
                 builder: (context) => IconButton(
                     onPressed: () {
@@ -27,7 +28,7 @@ class CusAppBar extends StatelessWidget implements PreferredSizeWidget {
                       Icons.menu,
                       color: Colors.black,
                     ))),
-          widthSizedBox(120.0),
+          widthSizedBox(50.0),
           const Text(
             "BM TecnoLabs",
             style: TextStyle(
@@ -35,6 +36,7 @@ class CusAppBar extends StatelessWidget implements PreferredSizeWidget {
                 color: Color(0xFF88d037),
                 fontSize: 25),
           ),
+          // if (Responsive.isTablet(context)) TabAppBar(),
           if (Responsive.isDesktop(context)) WebAppBar()
         ],
       ),
@@ -102,6 +104,45 @@ class cusBtn extends StatelessWidget {
           fontWeight: FontWeight.w500,
         ),
       ),
+    );
+  }
+}
+
+class TabAppBar extends StatelessWidget {
+  const TabAppBar({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        widthSizedBox(60.0),
+        cusBtn(
+          text: 'Home',
+          onTap: () {},
+        ),
+        widthSizedBox(40.0),
+        cusBtn(
+          text: 'Services',
+          onTap: () {},
+        ),
+        widthSizedBox(40.0),
+        cusBtn(
+          text: 'Project',
+          onTap: () {},
+        ),
+        widthSizedBox(40.0),
+        cusBtn(
+          text: 'Gallery',
+          onTap: () {},
+        ),
+        widthSizedBox(40.0),
+        cusBtn(
+          text: 'Contect',
+          onTap: () {},
+        ),
+      ],
     );
   }
 }

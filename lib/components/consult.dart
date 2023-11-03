@@ -73,3 +73,84 @@ class Consult extends StatelessWidget {
     );
   }
 }
+
+class MobConsult extends StatelessWidget {
+  const MobConsult({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: width(context),
+      height: 300,
+      color: Color(0xFF88d037),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 15, right: 15),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            heightSizedBox(10.0),
+            Text(
+              "Do You Need a Consultation?",
+              style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            ),
+            heightSizedBox(10.0),
+            Text(
+              "Solar can give you lots of advantages, from which you will surely benefit",
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white),
+            ),
+            heightSizedBox(30.0),
+            CallBtn()
+          ],
+        ),
+      ),
+      // // widthSizedBox(100.0),
+    );
+  }
+}
+
+class CallBtn extends StatelessWidget {
+  const CallBtn({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 180,
+      height: 60,
+      child: ElevatedButton(
+        onPressed: () {
+          // showDialog(
+          //     context: context,
+          //     builder: (BuildContext context) {
+          //       return AlertDialog(
+          //         content: Container(
+          //           width: 800,
+          //           height: 500,
+          //           color: Colors.green,
+          //           child: Column(
+          //             children: [],
+          //           ),
+          //         ),
+          //       );
+          //     });
+        },
+        child: Text(
+          "Call2Action",
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
+        ),
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
+      ),
+    );
+  }
+}

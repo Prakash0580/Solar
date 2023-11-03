@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../utils/common_style.dart';
@@ -43,9 +42,6 @@ class AboutItems extends StatelessWidget {
   }
 }
 
-
-
-
 class TotalItems extends StatelessWidget {
   final String quantity, service;
   const TotalItems({
@@ -80,6 +76,48 @@ class TotalItems extends StatelessWidget {
           color: Color(0xFF88d037),
         )
       ],
+    );
+  }
+}
+
+class MobAboutItems extends StatelessWidget {
+  const MobAboutItems({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: width(context),
+      height: null,
+      color: Color(0xFF2b435b),
+      child: Column(
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          heightSizedBox(50.0),
+          TotalItems(
+            quantity: '1535',
+            service: "Solar Installations",
+          ),
+          heightSizedBox(20.0),
+          // Spacer(),
+          TotalItems(
+            quantity: '40',
+            service: "Team Members",
+          ),
+          heightSizedBox(20.0),
+          TotalItems(
+            quantity: '22',
+            service: "Solar Models",
+          ),
+          heightSizedBox(20.0),
+          TotalItems(
+            quantity: '10',
+            service: "Years of Experience",
+          ),
+          heightSizedBox(50.0),
+        ],
+      ),
     );
   }
 }
