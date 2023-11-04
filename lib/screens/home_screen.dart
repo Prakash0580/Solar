@@ -9,18 +9,19 @@ import '../components/bottom.menu.dart';
 import '../components/consult.dart';
 
 import '../components/contact_us.dart';
+import '../components/drawer.dart';
 import '../components/gallery.dart';
 import '../components/offering.dart';
 import '../components/our_team.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CusAppBar(),
-      drawer: const Drawer(),
+      drawer: MobDrawer(),
       body: SizedBox(
         width: width(context),
         height: null,
@@ -60,7 +61,7 @@ class HomeScreen extends StatelessWidget {
               if (Responsive.isDesktop(context)) const ContactUs(),
               // MobContactUs(),
               heightSizedBox(50.0),
-                if (Responsive.isMobile(context)) const MobBottomMenu(),
+              if (Responsive.isMobile(context)) const MobBottomMenu(),
               if (Responsive.isTablet(context)) const BottomMenu(),
               if (Responsive.isDesktop(context)) const BottomMenu(),
               // BottomMenu()

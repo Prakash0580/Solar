@@ -12,7 +12,7 @@ class ContactUs extends StatelessWidget {
     return Container(
       height: null,
       width: width(context),
-      constraints: BoxConstraints(minWidth: 900),
+      constraints: const BoxConstraints(minWidth: 900),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -22,8 +22,8 @@ class ContactUs extends StatelessWidget {
             style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
           ),
           heightSizedBox(50.0),
-          Padding(
-            padding: const EdgeInsets.only(left: 200, right: 200),
+          const Padding(
+            padding: EdgeInsets.only(left: 200, right: 200),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,39 +86,35 @@ class ContactForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TxtField(
+        const TxtField(
           hintText: "Name",
         ),
         heightSizedBox(30.0),
-        TxtField(
+        const TxtField(
           hintText: "Email",
         ),
         heightSizedBox(30.0),
-        TxtField(
+        const TxtField(
           hintText: "Mobile",
         ),
         heightSizedBox(30.0),
-        TxtField(
+        const TxtField(
           hintText: "Messege",
           maxLines: 10,
           height: 100,
         ),
         heightSizedBox(30.0),
-
-        Container(
-          height: 60,
-          width: 200,
-          color: Color(0xFF88d037),
-          child: Center(
-            child: Text("Submit"),
-          ),
-        )
-        // ElevatedButton(
-        //     style: ElevatedButton.styleFrom(
-        //         backgroundColor: Colors.green,
-        //         fixedSize: Size(200, 60)),
-        //     onPressed: () {},
-        //     child: Text("Submit"))
+        ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                elevation: 5,
+                shadowColor: Colors.black,
+                backgroundColor: const Color(0xFF88d037),
+                fixedSize: const Size(200, 60)),
+            onPressed: () {},
+            child: const Text(
+              "Submit",
+              style: TextStyle(fontSize: 20, color: Colors.black),
+            ))
       ],
     );
   }
@@ -172,7 +168,7 @@ class MobContactUs extends StatelessWidget {
     return Container(
       height: null,
       width: width(context),
-      constraints: BoxConstraints(minWidth: 900),
+      constraints: const BoxConstraints(minWidth: 900),
       child: Padding(
         padding: const EdgeInsets.only(left: 15, right: 15),
         child: Column(
@@ -184,9 +180,9 @@ class MobContactUs extends StatelessWidget {
               style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
             ),
             heightSizedBox(50.0),
-            ContactDetails(),
+            const ContactDetails(),
             heightSizedBox(50.0),
-            ContactForm()
+            const ContactForm()
 
             // )
           ],

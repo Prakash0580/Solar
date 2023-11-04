@@ -176,27 +176,27 @@ class TxtField extends StatelessWidget {
         height: height ?? 60,
         child: TextField(
           maxLines: maxLines,
-          // maxLength: maxLength,
           cursorColor: Colors.black38,
-          // textAlign: TextAlign.center,
-          // textDirection:textd ,
+          style: const TextStyle(
+            fontSize: 20,
+          ),
           cursorWidth: 0.5,
           cursorHeight: 20,
           decoration: InputDecoration(
               // hoverColor: Colors.green.shade100,
-              fillColor: Color(0xFFfaf7f7),
+              fillColor: const Color(0xFFfaf7f7),
               filled: true,
-              focusedBorder: OutlineInputBorder(
+              focusedBorder: const OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.red, width: 0.5),
               ),
-              enabledBorder: OutlineInputBorder(
+              enabledBorder: const OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.black45, width: 0.1),
               ),
-              border: OutlineInputBorder(
+              border: const OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.red),
               ),
               hintText: hintText,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                   fontSize: 16,
                   color: Colors.black38,
                   fontWeight: FontWeight.w600)),
