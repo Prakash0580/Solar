@@ -162,13 +162,18 @@ class TxtField extends StatelessWidget {
   final String? hintText;
   final int? maxLines, maxLength;
   const TxtField(
-      {super.key, this.hintText, this.maxLines, this.maxLength, this.height,this.width});
+      {super.key,
+      this.hintText,
+      this.maxLines,
+      this.maxLength,
+      this.height,
+      this.width});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width:width?? 400,
-        height: height ?? 50,
+        width: width ?? 400,
+        height: height ?? 60,
         child: TextField(
           maxLines: maxLines,
           // maxLength: maxLength,
