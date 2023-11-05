@@ -9,11 +9,12 @@ class Offering extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        Expanded(
-          child: Column(
+    return Padding(
+      padding: const EdgeInsets.only(left: 100),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -47,10 +48,10 @@ class Offering extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        widthSizedBox(30.0),
-        Expanded(child: Image.asset("assets/images/11.jpg"))
-      ],
+          widthSizedBox(30.0),
+          Expanded(child: Image.asset("assets/images/11.jpg"))
+        ],
+      ),
     );
   }
 }
