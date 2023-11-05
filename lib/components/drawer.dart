@@ -63,7 +63,7 @@ class MobDrawer extends StatelessWidget {
           ),
           ListTile(
             title: Text(
-              "Contect",
+              "Contact",
               style: drawerstyle,
             ),
             leading: const Icon(Icons.contact_page),

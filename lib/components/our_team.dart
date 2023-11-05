@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../utils/common_style.dart';
 
 class OurTeam extends StatelessWidget {
@@ -12,11 +11,11 @@ class OurTeam extends StatelessWidget {
     return Container(
       height: 700,
       width: width(context),
-      color: Color(0xFFfaf7f7),
+      color: const Color(0xFFfaf7f7),
       child: Column(
         children: [
           heightSizedBox(50.0),
-          Text(
+          const Text(
             "Meet Our Team",
             style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
           ),
@@ -24,34 +23,34 @@ class OurTeam extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(
+              const Expanded(
                 child: TeamImages(
                   src: "assets/images/team1.jpg",
-                  name: "Philip Murphy",
+                  name: "Raj Kumar",
                   post: "Solar support specialist",
                 ),
               ),
               widthSizedBox(20.0),
-              Expanded(
+              const Expanded(
                 child: TeamImages(
                   src: "assets/images/team2.jpg",
-                  name: "Nicholas Hunt",
+                  name: "Raj Kumar",
                   post: "Project manager",
                 ),
               ),
               widthSizedBox(20.0),
-              Expanded(
+              const Expanded(
                 child: TeamImages(
                   src: "assets/images/team3.jpg",
-                  name: "Carl Richards",
+                  name: "Raj Kumar",
                   post: "Certified solar consultant",
                 ),
               ),
               widthSizedBox(20.0),
-              Expanded(
+              const Expanded(
                 child: TeamImages(
                   src: "assets/images/team4.jpg",
-                  name: "Adam Smith",
+                  name: "Raj Kumar",
                   post: "Solar support specialist",
                 ),
               ),
@@ -78,7 +77,7 @@ class TeamImages extends StatelessWidget {
           Container(
             width: width(context),
             height: 270,
-            constraints: BoxConstraints(minWidth: 260),
+            constraints: const BoxConstraints(minWidth: 260),
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(src), // Replace with your image path
@@ -89,12 +88,12 @@ class TeamImages extends StatelessWidget {
           heightSizedBox(20.0),
           Text(
             name,
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
           heightSizedBox(15.0),
           Text(
             post,
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 20, fontWeight: FontWeight.w500, color: Colors.grey),
           ),
         ],
@@ -113,36 +112,36 @@ class MobOurTeam extends StatelessWidget {
     return Container(
         height: null,
         width: width(context),
-        color: Color(0xFFfaf7f7),
+        color: const Color(0xFFfaf7f7),
         child: Column(
           children: [
             // heightSizedBox(50.0),
-            Text(
+            const Text(
               "Meet Our Team",
               style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
             ),
             heightSizedBox(30.0),
-            TeamImages(
+            const TeamImages(
               src: "assets/images/team1.jpg",
-              name: "Adam Smith",
+              name: "Raj kumar",
               post: "Solar support specialist",
             ),
             heightSizedBox(30.0),
-            TeamImages(
+            const TeamImages(
               src: "assets/images/team2.jpg",
-              name: "Adam Smith",
+              name: "Raj kumar",
               post: "Project manager",
             ),
             heightSizedBox(30.0),
-            TeamImages(
+            const TeamImages(
               src: "assets/images/team3.jpg",
-              name: "Adam Smith",
+              name: "Raj kumar",
               post: "Certified solar consultant",
             ),
             heightSizedBox(30.0),
-            TeamImages(
+            const TeamImages(
               src: "assets/images/team4.jpg",
-              name: "Adam Smith",
+              name: "Raj kumar",
               post: "Solar support specialist",
             ),
             heightSizedBox(50.0),

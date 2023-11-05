@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/common_style.dart';
+import '../utils/field_val.dart';
 
 class ContactUs extends StatelessWidget {
   const ContactUs({
@@ -59,7 +60,7 @@ class ContactDetails extends StatelessWidget {
         heightSizedBox(30.0),
         const ContectItems(
           icon: Icons.location_on,
-          title: "Phone:",
+          title: "Address:",
           text:
               "4801 Software Training Institute\nShop, No 1, Pulia, near Dhavas Pulia,\nJaipur",
         ),
@@ -88,20 +89,25 @@ class ContactForm extends StatelessWidget {
       children: [
         const TxtField(
           hintText: "Name",
+          validator: validateField,
         ),
         heightSizedBox(30.0),
         const TxtField(
           hintText: "Email",
+          validator: validateField,
         ),
         heightSizedBox(30.0),
         const TxtField(
           hintText: "Mobile",
+          validator: validateField,
         ),
         heightSizedBox(30.0),
         const TxtField(
           hintText: "Messege",
-          maxLines: 10,
-          height: 100,
+          maxLines: 5,
+          validator: validateField,
+
+          // height: 100,
         ),
         heightSizedBox(30.0),
         ElevatedButton(
