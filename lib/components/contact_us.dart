@@ -24,14 +24,14 @@ class ContactUs extends StatelessWidget {
           ),
           heightSizedBox(50.0),
           Padding(
-            padding: const EdgeInsets.only(left: 200, right: 200),
+            padding: EdgeInsets.only(left: 200, right: 200),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const ContactDetails(),
                 const Spacer(),
-                ContactForm(),
+                Expanded(child: ContactForm()),
               ],
             ),
           )
@@ -79,9 +79,7 @@ class ContactDetails extends StatelessWidget {
 }
 
 class ContactForm extends StatelessWidget {
-  ContactForm({
-    super.key,
-  });
+  ContactForm({super.key});
 
   TextEditingController nameCont = TextEditingController();
   TextEditingController emailCont = TextEditingController();

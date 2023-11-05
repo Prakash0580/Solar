@@ -31,7 +31,7 @@ class Consult extends StatelessWidget {
                 "Solar can give you lots of advantages, from which you will surely benefit",
                 style: TextStyle(
                     fontSize: 20,
-                    fontWeight: FontWeight.w700,
+                    // fontWeight: FontWeight.w700,
                     color: Colors.white),
               ),
             ],
@@ -39,6 +39,7 @@ class Consult extends StatelessWidget {
           widthSizedBox(100.0),
           SubmitBtn(
             name: "Call2Action",
+            backgrounColor: Colors.white,
             onTap: () {
               // showDialog(
               //     context: context,
@@ -97,6 +98,7 @@ class MobConsult extends StatelessWidget {
             ),
             heightSizedBox(30.0),
             SubmitBtn(
+              backgrounColor: Colors.white,
               name: "Call2Action",
               onTap: () {},
             )

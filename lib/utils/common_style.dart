@@ -47,9 +47,10 @@ ScaffoldFeatureController<SnackBar, SnackBarClosedReason> snackBar(
 class SubmitBtn extends StatelessWidget {
   final String name;
   final Function()? onTap;
+  final Color? backgrounColor;
   const SubmitBtn({
     super.key,
-    required this.name,this.onTap
+    required this.name,this.onTap,this.backgrounColor
   });
 
   @override
@@ -58,7 +59,7 @@ class SubmitBtn extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             elevation: 5,
             shadowColor: Colors.black,
-            backgroundColor: const Color(0xFF88d037),
+            backgroundColor:backgrounColor?? const Color(0xFF88d037),
             fixedSize: const Size(200, 60)),
         onPressed: onTap,
         child:  Text(

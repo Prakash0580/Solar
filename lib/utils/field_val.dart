@@ -33,7 +33,7 @@ class TxtField extends StatelessWidget {
   final TextEditingController? controller;
   final int? maxLines, minLines, maxLength;
   final dynamic onTap;
-  final double? cursorHeight;
+  final double? cursorHeight, width, height;
 
   final Function? validator;
   final BoxDecoration? decoration;
@@ -74,56 +74,61 @@ class TxtField extends StatelessWidget {
       this.filled,
       this.fillColor,
       this.validator,
+      this.height,
+      this.width,
       this.style})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-        onTap: onTap,
-        style: style ??
-            const TextStyle(
-                color: Colors.black,
-                fontSize: 14.5,
-                fontWeight: FontWeight.w600),
-        textAlign: textAlign ?? TextAlign.start,
-        onChanged: onChanged,
-        cursorHeight: cursorHeight ?? 20.0,
-        inputFormatters: inputFormatters,
-        autovalidateMode: AutovalidateMode.onUserInteraction,
-        maxLines: maxLines,
-        cursorColor: Colors.black38,
-        cursorWidth: 1,
-        minLines: minLines,
-        maxLength: maxLength,
-        controller: controller,
-        onSaved: onSaved,
-        keyboardType: keyboardType,
-        validator: validator != null ? (value) => validator!(value) : null,
-        readOnly: readOnly ?? false,
-        scrollPadding: EdgeInsets.zero,
-        decoration: InputDecoration(
-            focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Color(0xFF88d037), width: 0.5),
-            ),
-            enabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.black45, width: 0.1),
-            ),
-            fillColor: const Color(0xFFfaf7f7),
-            filled: filled ?? true,
-            errorStyle: const TextStyle(color: Colors.red),
-            errorText: errorText,
-            counter: const Offstage(),
-            labelStyle: const TextStyle(
-                fontSize: 15,
-                // fontWeight: FontWeight.bold,
-                color: Colors.black),
-            labelText: labelText,
-            border: border == true ? const OutlineInputBorder() : null,
-            hintText: hintText,
-            prefixIcon: prefixIcon,
-            suffixIcon: suffixIcon,
-            contentPadding: contentPadding));
+    return SizedBox(
+      
+      child: TextFormField(
+          onTap: onTap,
+          style: style ??
+              const TextStyle(
+                  color: Colors.black,
+                  fontSize: 14.5,
+                  fontWeight: FontWeight.w600),
+          textAlign: textAlign ?? TextAlign.start,
+          onChanged: onChanged,
+          cursorHeight: cursorHeight ?? 20.0,
+          inputFormatters: inputFormatters,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
+          maxLines: maxLines,
+          cursorColor: Colors.black38,
+          cursorWidth: 1,
+          minLines: minLines,
+          maxLength: maxLength,
+          controller: controller,
+          onSaved: onSaved,
+          keyboardType: keyboardType,
+          validator: validator != null ? (value) => validator!(value) : null,
+          readOnly: readOnly ?? false,
+          scrollPadding: EdgeInsets.zero,
+          decoration: InputDecoration(
+              focusedBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: Color(0xFF88d037), width: 0.5),
+              ),
+              enabledBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.black45, width: 0.1),
+              ),
+              fillColor: const Color(0xFFfaf7f7),
+              filled: filled ?? true,
+              errorStyle: const TextStyle(color: Colors.red),
+              errorText: errorText,
+              counter: const Offstage(),
+              labelStyle: const TextStyle(
+                  fontSize: 15,
+                  // fontWeight: FontWeight.bold,
+                  color: Colors.black),
+              labelText: labelText,
+              border: border == true ? const OutlineInputBorder() : null,
+              hintText: hintText,
+              prefixIcon: prefixIcon,
+              suffixIcon: suffixIcon,
+              contentPadding: contentPadding)),
+    );
   }
 }
 
