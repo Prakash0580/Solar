@@ -30,7 +30,7 @@ class ContactUs extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const ContactDetails(),
-                const Spacer(),
+               const Spacer(),
                 Expanded(child: ContactForm()),
               ],
             ),
@@ -79,7 +79,9 @@ class ContactDetails extends StatelessWidget {
 }
 
 class ContactForm extends StatelessWidget {
-  ContactForm({super.key});
+  ContactForm({
+    super.key,
+  });
 
   TextEditingController nameCont = TextEditingController();
   TextEditingController emailCont = TextEditingController();
