@@ -20,14 +20,16 @@ class CusAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           if (Responsive.isMobile(context) || Responsive.isTablet(context))
             Builder(
-                builder: (context) => IconButton(
-                    onPressed: () {
-                      Scaffold.of(context).openDrawer();
-                    },
-                    icon: const Icon(
-                      Icons.menu,
-                      color: Colors.black,
-                    ))),
+              builder: (context) => IconButton(
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                icon: const Icon(
+                  Icons.menu,
+                  color: Colors.black,
+                ),
+              ),
+            ),
           widthSizedBox(50.0),
           const Text(
             "BM TecnoLabs",
@@ -37,7 +39,7 @@ class CusAppBar extends StatelessWidget implements PreferredSizeWidget {
                 fontSize: 25),
           ),
           // if (Responsive.isTablet(context)) TabAppBar(),
-          if (Responsive.isDesktop(context)) WebAppBar()
+          if (Responsive.isDesktop(context)) const WebAppBar()
         ],
       ),
     );
@@ -54,27 +56,27 @@ class WebAppBar extends StatelessWidget {
     return Row(
       children: [
         widthSizedBox(60.0),
-        cusBtn(
+        CusBtn(
           text: 'Home',
           onTap: () {},
         ),
         widthSizedBox(40.0),
-        cusBtn(
+        CusBtn(
           text: 'Services',
           onTap: () {},
         ),
         widthSizedBox(40.0),
-        cusBtn(
+        CusBtn(
           text: 'Project',
           onTap: () {},
         ),
         widthSizedBox(40.0),
-        cusBtn(
+        CusBtn(
           text: 'Gallery',
           onTap: () {},
         ),
         widthSizedBox(40.0),
-        cusBtn(
+        CusBtn(
           text: 'Contect',
           onTap: () {},
         ),
@@ -83,10 +85,10 @@ class WebAppBar extends StatelessWidget {
   }
 }
 
-class cusBtn extends StatelessWidget {
+class CusBtn extends StatelessWidget {
   final String text;
   final Function()? onTap;
-  const cusBtn({
+  const CusBtn({
     super.key,
     required this.text,
     this.onTap,
@@ -118,27 +120,27 @@ class TabAppBar extends StatelessWidget {
     return Row(
       children: [
         widthSizedBox(60.0),
-        cusBtn(
+        CusBtn(
           text: 'Home',
           onTap: () {},
         ),
         widthSizedBox(40.0),
-        cusBtn(
+        CusBtn(
           text: 'Services',
           onTap: () {},
         ),
         widthSizedBox(40.0),
-        cusBtn(
+        CusBtn(
           text: 'Project',
           onTap: () {},
         ),
         widthSizedBox(40.0),
-        cusBtn(
+        CusBtn(
           text: 'Gallery',
           onTap: () {},
         ),
         widthSizedBox(40.0),
-        cusBtn(
+        CusBtn(
           text: 'Contect',
           onTap: () {},
         ),
@@ -146,3 +148,5 @@ class TabAppBar extends StatelessWidget {
     );
   }
 }
+
+

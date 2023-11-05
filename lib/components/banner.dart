@@ -27,7 +27,7 @@ class TopBanner extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "We stand for ecology and",
                   style: TextStyle(
                       fontSize: 40,
@@ -92,7 +92,7 @@ class TabTopBanner extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "We stand for ecology and",
                   style: TextStyle(
                       fontSize: 30,
@@ -160,7 +160,7 @@ class MobTopBanner extends StatelessWidget {
                 children: [
                   // Padding(padding: EdgeInsets.only(left: 20)),
                   heightSizedBox(50.0),
-                  Text(
+                  const Text(
                     "We stand for ecology and",
                     style: TextStyle(
                         fontSize: 22,

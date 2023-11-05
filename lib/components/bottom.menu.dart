@@ -20,7 +20,7 @@ class BottomMenu extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text(
+                const Text(
                   "BM Tecno Labs",
                   style: TextStyle(
                       fontSize: 25,
@@ -29,7 +29,7 @@ class BottomMenu extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       "Copyright",
                       style: TextStyle(
                           fontSize: 25,
@@ -37,7 +37,7 @@ class BottomMenu extends StatelessWidget {
                           color: Colors.white),
                     ),
                     heightSizedBox(15.0),
-                    Text(
+                    const Text(
                       "@ Bm Tecno Labs All right riserved",
                       style: TextStyle(
                           fontSize: 16,
@@ -70,7 +70,7 @@ class MobBottomMenu extends StatelessWidget {
         padding: const EdgeInsets.only(left: 15, right: 15, top: 50),
         child: Column(
           children: [
-            Text(
+            const Text(
               "BM Tecno Labs",
               style: TextStyle(
                   fontSize: 25,
@@ -81,14 +81,14 @@ class MobBottomMenu extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Copyright",
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
-                Text(
+                const Text(
                   "@ Bm Tecno Labs 2023 All right reserved.",
                   style: TextStyle(
                       fontSize: 14,

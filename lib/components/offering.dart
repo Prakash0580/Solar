@@ -66,13 +66,13 @@ class MobOffering extends StatelessWidget {
         // mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             "We Offer Green Technologies",
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
           heightSizedBox(15.0),
-          Center(
-            child: const Text(
+          const Center(
+            child: Text(
               "Our company is an end-to-end, customer\noriented alternative energy company that\nis centered on the marketing, trading,\ntransportation, and distribution of solar panels in the US and around the world…",
               style: TextStyle(
                   fontSize: 18,

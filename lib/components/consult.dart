@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../utils/common_style.dart';
 
 class Consult extends StatelessWidget {
@@ -12,7 +11,7 @@ class Consult extends StatelessWidget {
     return Container(
       width: width(context),
       height: 250,
-      color: Color(0xFF88d037),
+      color: const Color(0xFF88d037),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -21,14 +20,14 @@ class Consult extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               heightSizedBox(20.0),
-              Text(
+              const Text(
                 "Do You Need a Consultation?",
                 style: TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
-              Text(
+              const Text(
                 "Solar can give you lots of advantages, from which you will surely benefit",
                 style: TextStyle(
                     fontSize: 20,
@@ -38,35 +37,24 @@ class Consult extends StatelessWidget {
             ],
           ),
           widthSizedBox(100.0),
-          Container(
-            width: 200,
-            height: 60,
-            child: ElevatedButton(
-              onPressed: () {
-                // showDialog(
-                //     context: context,
-                //     builder: (BuildContext context) {
-                //       return AlertDialog(
-                //         content: Container(
-                //           width: 800,
-                //           height: 500,
-                //           color: Colors.green,
-                //           child: Column(
-                //             children: [],
-                //           ),
-                //         ),
-                //       );
-                //     });
-              },
-              child: Text(
-                "Call2Action",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              ),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
-            ),
+          SubmitBtn(
+            name: "Call2Action",
+            onTap: () {
+              // showDialog(
+              //     context: context,
+              //     builder: (BuildContext context) {
+              //       return AlertDialog(
+              //         content: Container(
+              //           width: 800,
+              //           height: 500,
+              //           color: Colors.green,
+              //           child: Column(
+              //             children: [],
+              //           ),
+              //         ),
+              //       );
+              //     });
+            },
           )
         ],
       ),
@@ -84,7 +72,7 @@ class MobConsult extends StatelessWidget {
     return Container(
       width: width(context),
       height: 300,
-      color: Color(0xFF88d037),
+      color: const Color(0xFF88d037),
       child: Padding(
         padding: const EdgeInsets.only(left: 15, right: 15),
         child: Column(
@@ -92,7 +80,7 @@ class MobConsult extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             heightSizedBox(10.0),
-            Text(
+            const Text(
               "Do You Need a Consultation?",
               style: TextStyle(
                   fontSize: 40,
@@ -100,7 +88,7 @@ class MobConsult extends StatelessWidget {
                   color: Colors.white),
             ),
             heightSizedBox(10.0),
-            Text(
+            const Text(
               "Solar can give you lots of advantages, from which you will surely benefit",
               style: TextStyle(
                   fontSize: 18,
@@ -108,49 +96,14 @@ class MobConsult extends StatelessWidget {
                   color: Colors.white),
             ),
             heightSizedBox(30.0),
-            CallBtn()
+            SubmitBtn(
+              name: "Call2Action",
+              onTap: () {},
+            )
           ],
         ),
       ),
       // // widthSizedBox(100.0),
-    );
-  }
-}
-
-class CallBtn extends StatelessWidget {
-  const CallBtn({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 180,
-      height: 60,
-      child: ElevatedButton(
-        onPressed: () {
-          // showDialog(
-          //     context: context,
-          //     builder: (BuildContext context) {
-          //       return AlertDialog(
-          //         content: Container(
-          //           width: 800,
-          //           height: 500,
-          //           color: Colors.green,
-          //           child: Column(
-          //             children: [],
-          //           ),
-          //         ),
-          //       );
-          //     });
-        },
-        child: Text(
-          "Call2Action",
-          style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
-        ),
-        style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
-      ),
     );
   }
 }

@@ -2,12 +2,10 @@ import 'package:bm/components/res_layout.dart';
 import 'package:bm/utils/common_style.dart';
 import 'package:flutter/material.dart';
 import '../components/about_items.dart';
-
 import '../components/app_bar.dart';
 import '../components/banner.dart';
 import '../components/bottom.menu.dart';
 import '../components/consult.dart';
-
 import '../components/contact_us.dart';
 import '../components/drawer.dart';
 import '../components/gallery.dart';
@@ -15,7 +13,7 @@ import '../components/offering.dart';
 import '../components/our_team.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +29,6 @@ class HomeScreen extends StatelessWidget {
               if (Responsive.isMobile(context)) const MobTopBanner(),
               if (Responsive.isTablet(context)) const TabTopBanner(),
               if (Responsive.isDesktop(context)) const TopBanner(),
-
               // const TopBanner(),
               if (Responsive.isMobile(context)) const MobOffering(),
               if (Responsive.isTablet(context)) const Offering(),
@@ -41,7 +38,6 @@ class HomeScreen extends StatelessWidget {
               if (Responsive.isMobile(context)) const MobConsult(),
               if (Responsive.isTablet(context)) const Consult(),
               if (Responsive.isDesktop(context)) const Consult(),
-
               // const Consult(),
               heightSizedBox(80.0),
               if (Responsive.isMobile(context)) const MobOurTeam(),

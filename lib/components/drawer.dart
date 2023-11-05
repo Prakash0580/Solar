@@ -17,7 +17,7 @@ class MobDrawer extends StatelessWidget {
           Container(
               width: width(context),
               height: 150,
-              color: Color(0xFF88d037),
+              color: const Color(0xFF88d037),
               child: const Center(
                 child: Text(
                   "BM TecnoLabs",

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: "BM Tecno Labs",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'CrimsonText'),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

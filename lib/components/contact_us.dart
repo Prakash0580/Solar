@@ -23,14 +23,14 @@ class ContactUs extends StatelessWidget {
             style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
           ),
           heightSizedBox(50.0),
-          const Padding(
-            padding: EdgeInsets.only(left: 200, right: 200),
+          Padding(
+            padding: const EdgeInsets.only(left: 200, right: 200),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ContactDetails(),
-                Spacer(),
+                const ContactDetails(),
+                const Spacer(),
                 ContactForm(),
               ],
             ),
@@ -79,48 +79,50 @@ class ContactDetails extends StatelessWidget {
 }
 
 class ContactForm extends StatelessWidget {
-  const ContactForm({
+  ContactForm({
     super.key,
   });
+
+  TextEditingController nameCont = TextEditingController();
+  TextEditingController emailCont = TextEditingController();
+  TextEditingController mobileCont = TextEditingController();
+  TextEditingController messegeCont = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const TxtField(
+        TxtField(
           hintText: "Name",
           validator: validateField,
+          controller: nameCont,
         ),
         heightSizedBox(30.0),
-        const TxtField(
+        TxtField(
           hintText: "Email",
           validator: validateField,
+          controller: emailCont,
         ),
         heightSizedBox(30.0),
-        const TxtField(
+        TxtField(
           hintText: "Mobile",
           validator: validateField,
+          controller: mobileCont,
         ),
         heightSizedBox(30.0),
-        const TxtField(
+        TxtField(
           hintText: "Messege",
           maxLines: 5,
           validator: validateField,
+          controller: messegeCont,
 
           // height: 100,
         ),
         heightSizedBox(30.0),
-        ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                elevation: 5,
-                shadowColor: Colors.black,
-                backgroundColor: const Color(0xFF88d037),
-                fixedSize: const Size(200, 60)),
-            onPressed: () {},
-            child: const Text(
-              "Submit",
-              style: TextStyle(fontSize: 20, color: Colors.black),
-            ))
+        SubmitBtn(
+          name: "Submit",
+          onTap: () {},
+        )
       ],
     );
   }
@@ -188,7 +190,7 @@ class MobContactUs extends StatelessWidget {
             heightSizedBox(50.0),
             const ContactDetails(),
             heightSizedBox(50.0),
-            const ContactForm()
+            ContactForm()
 
             // )
           ],

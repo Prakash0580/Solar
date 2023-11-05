@@ -12,11 +12,11 @@ class Gallery extends StatelessWidget {
     return Container(
       height: 900,
       width: width(context),
-      color: Color(0xFFfaf7f7),
+      color: const Color(0xFFfaf7f7),
       child: Column(
         children: [
           heightSizedBox(100.0),
-          Text(
+          const Text(
             "Our Gallery",
             style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
           ),
@@ -24,11 +24,11 @@ class Gallery extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GalleryCont(
+              const GalleryCont(
                 src: "assets/images/gallery1.jpg",
               ),
               widthSizedBox(30.0),
-              GalleryCont(
+              const GalleryCont(
                 src: "assets/images/gallery2.jpg",
                 width: 430,
                 height: 250,
@@ -39,13 +39,13 @@ class Gallery extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GalleryCont(
+              const GalleryCont(
                 src: "assets/images/gallery3.jpg",
                 width: 430,
                 height: 250,
               ),
               widthSizedBox(30.0),
-              GalleryCont(
+              const GalleryCont(
                 src: "assets/images/gallery4.jpg",
               ),
             ],
@@ -71,7 +71,7 @@ class GalleryCont extends StatelessWidget {
     return Container(
       width: width ?? 630,
       height: height ?? 250,
-      constraints: BoxConstraints(minWidth: 260),
+      constraints: const BoxConstraints(minWidth: 260),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(src), // Replace with your image path
@@ -92,33 +92,33 @@ class MobGallery extends StatelessWidget {
     return Container(
       height: null,
       width: width(context),
-      color: Color(0xFFfaf7f7),
+      color: const Color(0xFFfaf7f7),
       child: Padding(
         padding: const EdgeInsets.only(left: 15, right: 15),
         child: Column(
           children: [
             heightSizedBox(50.0),
-            Text(
+            const Text(
               "Our Gallery",
               style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
             ),
             heightSizedBox(50.0),
-            GalleryCont(
+            const GalleryCont(
               src: "assets/images/gallery1.jpg",
               height: 150,
             ),
             heightSizedBox(30.0),
-            GalleryCont(
+            const GalleryCont(
               src: "assets/images/gallery2.jpg",
               height: 150,
             ),
             heightSizedBox(30.0),
-            GalleryCont(
+            const GalleryCont(
               src: "assets/images/gallery3.jpg",
               height: 150,
             ),
             heightSizedBox(30.0),
-            GalleryCont(
+            const GalleryCont(
               src: "assets/images/gallery4.jpg",
               height: 150,
             ),

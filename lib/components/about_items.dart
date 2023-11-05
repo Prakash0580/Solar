@@ -12,8 +12,8 @@ class AboutItems extends StatelessWidget {
     return Container(
       width: width(context),
       height: 400,
-      color: Color(0xFF2b435b),
-      child: Row(
+      color: const Color(0xFF2b435b),
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           TotalItems(
@@ -58,7 +58,7 @@ class TotalItems extends StatelessWidget {
         // heightSizedBox(30.0),
         Text(
           quantity,
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 50,
               color: Color(0xFF88d037),
               fontWeight: FontWeight.bold),
@@ -66,14 +66,14 @@ class TotalItems extends StatelessWidget {
         heightSizedBox(20.0),
         Text(
           service,
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
         ),
         heightSizedBox(30.0),
         Container(
           width: 100,
           height: 1,
-          color: Color(0xFF88d037),
+          color: const Color(0xFF88d037),
         )
       ],
     );
@@ -90,28 +90,28 @@ class MobAboutItems extends StatelessWidget {
     return Container(
       width: width(context),
       height: null,
-      color: Color(0xFF2b435b),
+      color: const Color(0xFF2b435b),
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           heightSizedBox(50.0),
-          TotalItems(
+          const TotalItems(
             quantity: '1535',
             service: "Solar Installations",
           ),
           heightSizedBox(20.0),
           // Spacer(),
-          TotalItems(
+          const TotalItems(
             quantity: '40',
             service: "Team Members",
           ),
           heightSizedBox(20.0),
-          TotalItems(
+          const TotalItems(
             quantity: '22',
             service: "Solar Models",
           ),
           heightSizedBox(20.0),
-          TotalItems(
+          const TotalItems(
             quantity: '10',
             service: "Years of Experience",
           ),

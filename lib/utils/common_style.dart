@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppColor {
   static const backgroundColr = Colors.amber;
-  static const circlrAvtarBackgroundColor = Color.fromARGB(255, 255, 213, 79);
-  // static const backgroundColr = Colors.white;
-  static const yellowColr = Color.fromARGB(255, 212, 112, 255);
+ 
 }
 
-const appBarColor = Colors.amber;
+
 
 double height(BuildContext context) {
   return MediaQuery.of(context).size.height;
@@ -30,16 +27,10 @@ SizedBox widthSizedBox(width) {
   );
 }
 
-Container verticalDivider(double height) {
-  return Container(height: height, width: 1, color: Colors.black26);
-}
 
-Container horizontalDivider(width) {
-  return Container(height: 1, width: width, color: Colors.black26);
-}
 
-const textStyle1 = TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold);
-const textStyle2 = TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500);
+// const textStyle1 = TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold);
+// const textStyle2 = TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500);
 
 ScaffoldFeatureController<SnackBar, SnackBarClosedReason> snackBar(
     BuildContext context, String message,
@@ -52,107 +43,27 @@ ScaffoldFeatureController<SnackBar, SnackBarClosedReason> snackBar(
   );
 }
 
-// ! Button For Everything Screen
 
-// class Btn extends StatelessWidget {
-//   final String btnName;
-//   final Function() onPressed;
-//   final TextStyle? style;
-//   final double? width, height, fontSize;
-//   final Color? color, txtColor, btnColor;
-//   final EdgeInsets? padding, margin;
-//   // final Alignment? alignment;
-//   // final Decoration? decoration;
-//   // final TextDecoration? txtDecoration;
-
-//   const Btn(this.btnName,
-//       {Key? key,
-//       // this.alignmen
-//       this.color,
-//       // this.decoration,
-//       this.txtColor,
-//       this.width,
-//       this.height,
-//       this.padding,
-//       this.margin,
-//       this.style,
-//       required this.onPressed,
-//       // this.txtDecoration,
-//       this.fontSize,
-//       this.btnColor})
-//       : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return SizedBox(
-//       width: width,
-//       height: height ?? 45,
-//       child: CupertinoButton(
-//         onPressed: onPressed,
-//         padding: padding,
-//         color: btnColor,
-//         borderRadius: BorderRadius.circular(21),
-//         child: Center(
-//           child: Text(
-//             btnName,
-//             textAlign: TextAlign.center,
-//             style: style ??
-//                 TextStyle(
-//                     color: txtColor ?? Colors.white,
-//                     fontSize: fontSize ?? 15,
-//                     // decoration: txtDecoration,
-//                     fontWeight: FontWeight.w500),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-//
-class ChatBtn extends StatelessWidget {
-  final String btnName;
-  final Color? borderColor,
-      backgroundColor,
-      foregroundColor,
-      shadowColor,
-      textColor;
-  final Function() onpressed;
-  final double? btnWidth, btnHeight, fontSize, elevation;
-  // final ButtonStyle? buttonStyle;
-
-  const ChatBtn(
-      {super.key,
-      this.borderColor,
-      this.backgroundColor,
-      this.foregroundColor,
-      this.shadowColor,
-      required this.btnName,
-      required this.onpressed,
-      this.textColor,
-      this.btnWidth,
-      this.btnHeight,
-      this.fontSize,
-      this.elevation
-      // this.buttonStyle,
-      });
+class SubmitBtn extends StatelessWidget {
+  final String name;
+  final Function()? onTap;
+  const SubmitBtn({
+    super.key,
+    required this.name,this.onTap
+  });
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton(
-      onPressed: onpressed,
-      style: OutlinedButton.styleFrom(
-          backgroundColor: backgroundColor ?? Colors.white,
-          foregroundColor: foregroundColor,
-          shadowColor: shadowColor,
-          elevation: elevation ?? 2,
-          fixedSize: Size(btnWidth ?? 93, btnHeight ?? 40),
-          shape: const StadiumBorder(),
-          side: BorderSide(width: 1, color: borderColor ?? Colors.green)),
-      child: Text(
-        btnName,
-        style: TextStyle(color: textColor ?? Colors.green, fontSize: fontSize),
-      ),
-    );
+    return ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            elevation: 5,
+            shadowColor: Colors.black,
+            backgroundColor: const Color(0xFF88d037),
+            fixedSize: const Size(200, 60)),
+        onPressed: onTap,
+        child:  Text(
+          name,
+          style: const TextStyle(fontSize: 20, color: Colors.black),
+        ));
   }
 }
